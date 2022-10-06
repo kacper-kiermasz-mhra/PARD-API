@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Public Access Registration Database external API</h1>
+    <p>
+      Welcome to the Public Access Registration Database external facing API.
+      Currently, this system it is still undergoing development.
+    </p>
+  </div>
+  <div>
+    <h2>Currently available endpoints</h2>
+    <p>Below is a list of available endpoints and their uses:</p>
+    <table>
+      <tr>
+        <th>Endpoint</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>/getAllManufacturers</td>
+        <td>
+          This endpoint will return an array containing JSONs of all of the
+          registered manufacturers within PARD
+        </td>
+        <td><a href="/getAllManufacturers">/getAllManufacturers</a></td>
+      </tr>
+      <tr>
+        <td>/searchManufacturersByName/{searchTerm}</td>
+        <td>
+          This endpoint takes a search term parameter, and returns an array
+          containing JSONs of all of the registered manufacturers within PARD
+          that match the search term
+        </td>
+        <td>
+          <a href="/searchManufacturersByName/NIBSC"
+            >/searchManufacturersByName/NIBSC</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>/searchManufacturersById/{manufacturer ID}</td>
+        <td>
+          This endpoint takes a manufacturer ID as a parameter, and returns a
+          manufacturer that matches the provided ID.
+        </td>
+        <td>
+          <a href="/searchManufacturersById/2">/searchManufacturersById/2</a>
+        </td>
+      </tr>
+      <tr>
+        <td>/getAllDevices</td>
+        <td>
+          This endpoint will return an array containing JSONs of all of the
+          registered devices within PARD
+        </td>
+        <td><a href="/getAllDevices">/getAllDevices</a></td>
+      </tr>
+      <tr>
+        <td>/searchDevicesByName/{searchTerm}</td>
+        <td>
+          This endpoint takes a search term parameter, and returns an array
+          containing JSONs of all of the registered devices within PARD that
+          match the search term
+        </td>
+        <td>
+          <a href="/searchDevicesByName/medical device"
+            >/searchDevicesByName/medical device</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>/searchDevicesByManufacturer/{manufacturer ID}</td>
+        <td>
+          This endpoint takes the ID of a manufacturer and returns an array
+          containing JSONs of all devices being produced by the manufacturer.
+        </td>
+        <td>
+          <a href="/searchDevicesByManufacturer/2"
+            >/searchDevicesByManufacturer/2</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>/searchManufacturersByDevice/{searchTerm}</td>
+        <td>
+          This endpoint takes the GMDN_TERM_NAME of a device, and returns an
+          array of JSONs containing all associated manufacturers of the device.
+        </td>
+        <td>
+          <a href="/searchManufacturersByDevice/Rubella Virus IgM"
+            >/searchManufacturersByDevice/Rubella Virus IgM</a
+          >
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h2>Currently available information</h2>
+    <p>Below is a list of fields that are currently public:</p>
+    <div>
+      <h3>Manufacturers:</h3>
+      <table>
+        <tr>
+          <th>Field name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>TBD</td>
+          <td>TBD</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h3>Devices:</h3>
+      <table>
+        <tr>
+          <th>Field name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>TBD</td>
+          <td>TBD</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
